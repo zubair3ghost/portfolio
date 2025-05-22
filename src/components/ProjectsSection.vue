@@ -104,7 +104,7 @@ export default {
 <style scoped>
 .projects-section {
   background: #18181b;
-  padding: 4rem 0 3rem 0;
+  padding:4rem 1rem;
 }
 .section-title {
   text-align: center;

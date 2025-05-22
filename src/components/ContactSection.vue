@@ -212,12 +212,13 @@ export default {
   to { opacity: 1; transform: none;}
 } 
 
-
 .contact-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.12rem;
-  width: 100%;
 }
 .input-group {
   display: flex;
@@ -379,31 +380,44 @@ textarea.invalid {
   color: #18181b;
   transform: scale(1.13) rotate(-6deg);
 }
+
+/* Tablet and below: more compact padding */
 @media (max-width: 700px) {
   .contact-card {
     padding: 1.4rem 1rem 1.1rem 1rem;
-    /* max-width: 99vw; */
     width: 100%;
+    /* max-width: 99vw; */
+  }
+  .contact-form {
+    max-width: 100%;
+    padding: 0;
   }
 }
-@media (max-width: 430px) {
-  .contact-card {
-    padding: 0.7rem 0.4rem 0.7rem 0.4rem;
-    border-radius: 13px;
-    /* max-width: 300px; */
-    width: 100%;
 
+/* Mobile: smaller padding and icons */
+@media (max-width: 500px) {
+  .contact-card {
+    padding: 1rem;
+    border-radius: 13px;
+    width: 100%;
+    /* max-width: 100vw; */
   }
-  .contact-section{
-    max-width: 300px;
+  .contact-form {
+    max-width: 100%;
+    padding: 1;
+    gap: 0.75rem;
   }
   .contact-links {
     gap: 0.7rem;
   }
   .icon-link {
-    width: 38px;
-    height: 38px;
-    font-size: 1.08rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1.05rem;
+  }
+  .success-message {
+    font-size: 1rem;
+    gap: 0.8rem;
   }
 }
 </style>
