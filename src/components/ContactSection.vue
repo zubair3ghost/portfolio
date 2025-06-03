@@ -1,4 +1,343 @@
+
+
 <template>
+  <div class="contact-form-container">
+    <div class="form-wrapper">
+      <h2 class="form-title">Contact Us</h2>
+      <form @submit.prevent="submitForm" class="contact-form">
+        <div class="form-group">
+          <label for="name" class="form-label">Name *</label>
+          <input
+            type="text"
+            id="name"
+            v-model="form.name"
+            class="form-input"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email *</label>
+          <input
+            type="email"
+            id="email"
+            v-model="form.email"
+            class="form-input"
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            v-model="form.phone"
+            class="form-input"
+            placeholder="Enter your phone number"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Message *</label>
+          <textarea
+            id="message"
+            v-model="form.message"
+            class="form-textarea"
+            rows="5"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" :disabled="isSubmitting">
+          <span v-if="!isSubmitting">Send Message</span>
+          <span v-else>Sending...</span>
+        </button>
+      </form>
+
+      <!-- Success/Error Messages -->
+      <div v-if="successMessage" class="success-message">
+        {{ successMessage }}
+      </div>
+      <div v-if="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ContactForm',
+  data() {
+    return {
+      form: {
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      },
+      isSubmitting: false,
+      successMessage: '',
+      errorMessage: ''
+    }
+  },
+  methods: {
+    async submitForm() {
+      this.isSubmitting = true;
+      this.successMessage = '';
+      this.errorMessage = '';
+
+      try {
+        // Simulate form submission - replace with your actual API call
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        // Handle successful submission
+        this.successMessage = 'Message sent successfully! We\'ll get back to you soon.';
+        this.resetForm();
+      } catch (error) {
+        this.errorMessage = 'Failed to send message. Please try again later.';
+      } finally {
+        this.isSubmitting = false;
+      }
+    },
+    resetForm() {
+      this.form = {
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      };
+    }
+  }
+}
+</script>
+
+<style scoped>
+.contact-form-container {
+  min-height: 100vh;
+  background: #18181b;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-wrapper {
+  background: rgba(40, 40, 40, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #ffffff, #a0a0a0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.form-input,
+.form-textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.875rem 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(96, 165, 250, 0.4);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.success-message {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 1rem;
+  }
+
+  .form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form {
+    gap: 1.25rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 0.625rem 0.75rem;
+  }
+
+  .submit-btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.submit-btn:disabled span {
+  animation: pulse 1.5s infinite;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <template>
   <section id="contact" class="contact-section">
     <h2 class="section-title">Contact Me</h2>
     <transition name="fade-slide-up" appear>
@@ -223,7 +562,8 @@ export default {
 .input-group {
   display: flex;
   flex-direction: column;
-  position: relative;
+  position: relative;   
+  /* try to chagne the postion in form  */
   width: 100%;
 }
 label {
@@ -420,4 +760,4 @@ textarea.invalid {
     gap: 0.8rem;
   }
 }
-</style>
+</style> -->
