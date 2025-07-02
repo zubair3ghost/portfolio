@@ -2,7 +2,7 @@
   <footer class="footer-bar">
     <div class="footer-content">
       <div class="contact-info">
-        <span class="phone">📞 +123 456 7890</span>
+        <span class="phone">📞Whats App 03232978278</span>
       </div>
       <div class="socials">
         <a v-for="icon in socials" :key="icon.link" :href="icon.link" target="_blank" :title="icon.name" class="social-icon">
@@ -10,7 +10,7 @@
         </a>
       </div>
       <div class="copyright">
-        &copy; {{ new Date().getFullYear() }} M. Developer. All rights reserved.
+        &copy; {{ new Date().getFullYear() }} Z. Developer. All rights reserved.
       </div>
     </div>
   </footer>
@@ -23,8 +23,8 @@ export default {
     return {
       socials: [
         { name: "GitHub", icon: "fab fa-github", link: "https://github.com/yourusername" },
-        { name: "LinkedIn", icon: "fab fa-linkedin", link: "https://linkedin.com/in/yourprofile" },
-        { name: "Twitter", icon: "fab fa-twitter", link: "https://twitter.com/yourhandle" },
+        { name: "LinkedIn", icon: "fab fa-linkedin", link: "https://www.linkedin.com/feed/" },
+        { name: "Twitter", icon: "fab fa-twitter", link: "https://x.com/WebZubair" },
       ],
     };
   },

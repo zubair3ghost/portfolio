@@ -2,7 +2,9 @@
   <header class="site-header">
     <div class="container">
       <div class="logo">
-        <a href="#hero">M. Developer</a>
+        <a href="#hero">
+          <img src="../assets/z.png" alt="">
+        </a>
       </div>
       <nav class="desktop-nav">
         <a
@@ -105,7 +107,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped >
 .site-header {
   width: 100%;
   background: #18181b;
@@ -136,6 +138,9 @@ export default {
 .logo a:hover {
   color: #0ea5e9;
 }
+.logo a img{
+      width: 195px;
+  }
 .desktop-nav {
   display: flex;
   gap: 1.7rem;
