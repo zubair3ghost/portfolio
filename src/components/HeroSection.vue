@@ -188,11 +188,11 @@ export default {
   width: 100%;
   padding: 2rem 0;
 }
-
+  
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.9rem;
 }
 
 .hero-layout {
