@@ -24,16 +24,17 @@ export default {
       skills: [
         { name: "HTML", icon: "fab fa-html5", color: "#f6b08a" },         // softer orange
         { name: "CSS", icon: "fab fa-css3-alt", color: "#90b4f6" },       // soft blue
-        { name: "SCSS", icon: "fab fa-sass", color: "#e5b3cf" },          // pastel pink
-        { name: "Bootstrap", icon: "fab fa-bootstrap", color: "#b8a9d6" },// light purple
-        { name: "Material UI", icon: "fas fa-cube", color: "#89d7e6" },   // muted cyan
-        { name: "PrimeNG", icon: "fas fa-leaf", color: "#b1e4d7" },       // light teal
-        { name: "JavaScript", icon: "fab fa-js", color: "#ffe699" },      // pale yellow
+         { name: "JavaScript", icon: "fab fa-js", color: "#ffe699" },      // pale yellow
         { name: "Angular", icon: "fab fa-angular", color: "#e69ba8" },    // soft red
         { name: "Vue.js", icon: "fab fa-vuejs", color: "#a4dbc6" },       // mint
         { name: "Node.js", icon: "fab fa-node-js", color: "#b7e5b4" },    // soft green
         { name: "Express", icon: "fas fa-server", color: "#e0e0e0" },     // light gray
         { name: "NestJS", icon: "fas fa-feather-alt", color: "#f4b5c3" }, // light rose
+        { name: "SCSS", icon: "fab fa-sass", color: "#e5b3cf" },          // pastel pink
+        { name: "Bootstrap", icon: "fab fa-bootstrap", color: "#b8a9d6" },// light purple
+        { name: "Material UI", icon: "fas fa-cube", color: "#89d7e6" },   // muted cyan
+        { name: "PrimeNG", icon: "fas fa-leaf", color: "#b1e4d7" },       // light teal
+       
         { name: "Git", icon: "fab fa-git-alt", color: "#f6b4a4" },        // coral
         { name: "GitHub", icon: "fab fa-github", color: "#e0e0e0" },      // light gray
       ],

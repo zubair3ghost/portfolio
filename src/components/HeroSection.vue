@@ -636,7 +636,7 @@ export default {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 1rem;
+   padding: 0 1rem;
   }
   
   .hero-stats {
@@ -663,6 +663,11 @@ export default {
     width: 45px;
     height: 45px;
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+          margin-top: 2rem;
   }
 }
 </style>
