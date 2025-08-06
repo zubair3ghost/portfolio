@@ -154,12 +154,82 @@ export default {
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
   transition: background 0.15s, color 0.15s;
+
+
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* Initial border setup */
+  border: 2px solid transparent;
+  
+  /* Add subtle shadow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.desktop-nav a:hover,
+/* .desktop-nav a:hover,
 .desktop-nav a:focus {
   background: #23232a;
   color: #7dd3fc;
+      border: 2px solid #7dd3fc;
+    border-radius: 20px;
+} */
+
+
+
+
+
+/* Main hover effect */
+.desktop-nav a:hover,
+.desktop-nav a:focus {
+  background: rgba(35, 35, 42, 0.95);
+  color: #7dd3fc;
+  border: 2px solid #7dd3fc;
+  border-radius: 20px;
+  
+  /* Enhanced shadow on hover */
+  box-shadow: 
+    0 8px 25px rgba(125, 211, 252, 0.2),
+    0 0 0 1px rgba(125, 211, 252, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  
+  /* Subtle scale and lift effect */
+  transform: translateY(-2px) scale(1.05);
+  
+  /* Text glow effect */
+  text-shadow: 0 0 8px rgba(125, 211, 252, 0.6);
 }
+
+/* Animate background sweep on hover */
+.desktop-nav a:hover::before {
+  left: 100%;
+}
+
+/* Animate radial glow on hover */
+.desktop-nav a:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Burger/Cross icon styles */
 .burger {
