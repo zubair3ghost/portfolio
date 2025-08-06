@@ -1,6 +1,24 @@
 
 
 
+<!-- 
+ there are many projects we did 
+ like 
+ gift card admin panel
+ on tute website and admin panel 
+ ailaan 
+ almoosa epharmacy  
+      1 website 
+      2 admin panel
+      3 rider panle
+      4 pharmacist panel 
+  Car rental website
+-->
+
+
+
+
+
 
 <template>
   <section class="portfolio-section">
@@ -238,19 +256,21 @@ export default {
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
-  animation: fadeInUp 0.6s ease-out;
+  /* animation: fadeInUp 0.6s ease-out; */
   animation-fill-mode: both;
 }
 
 .project-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px var(--shadow-dark);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4), 
+            0 0 10px rgba(59, 130, 246, 0.2);
+  /* box-shadow: 0 20px 40px var(--color-dark); */
   border-color: rgba(96, 165, 250, 0.3);
 }
-
+/* 
 .project-card:hover .image-overlay {
   opacity: 1;
-}
+} */
 
 .project-card:hover .project-title {
   color: var(--accent-color);

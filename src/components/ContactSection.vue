@@ -3,7 +3,7 @@
 <template>
   <div class="contact-form-container">
     <div class="form-wrapper">
-      <h2 class="form-title">Contact Us</h2>
+      <h2 class="form-title">Contact Me</h2>
       <form @submit.prevent="submitForm" class="contact-form">
         <div class="form-group">
           <label for="name" class="form-label">Name *</label>

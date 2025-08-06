@@ -1050,7 +1050,7 @@ export default {
     transparent 270deg
   );
   animation: rotateGlow 4s linear infinite;
-  z-index: -1;
+  z-index: 1;
   opacity: 0.7;
 }
 
@@ -1065,7 +1065,7 @@ export default {
   /* background: linear-gradient(45deg, transparent, rgba(125, 211, 252, 0.2), transparent); */
   background:#7dd3fc;;
   animation: shimmer 2s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: 1;
 }
 
 .img-frame {
@@ -1075,9 +1075,11 @@ export default {
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--accent-color);
-  box-shadow: 
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4), 
+            0 0 10px rgba(59, 130, 246, 0.2);
+  /* box-shadow: 
     0 0 30px var(--shadow-glow),
-    inset 0 0 20px rgba(125, 211, 252, 0.1);
+    inset 0 0 20px rgba(125, 211, 252, 0.1); */
   animation: imagePulse 3s ease-in-out infinite alternate;
 }
 
@@ -1097,6 +1099,8 @@ export default {
   animation: rotate 8s linear infinite;
   z-index: 1;
   opacity: 0.3;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4), 
+            0 0 10px rgba(59, 130, 246, 0.2);
 }
 
 .hero-img {

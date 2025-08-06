@@ -2,7 +2,7 @@
   <footer class="footer-bar">
     <div class="footer-content">
       <div class="contact-info">
-        <span class="phone">📞Whats App 03232978278</span>
+        <span class="phone">📞Whats App 923232978278</span>
       </div>
       <div class="socials">
         <a v-for="icon in socials" :key="icon.link" :href="icon.link" target="_blank" :title="icon.name" class="social-icon">
