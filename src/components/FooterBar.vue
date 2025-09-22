@@ -22,7 +22,10 @@ export default {
   data() {
     return {
       socials: [
-        { name: "GitHub", icon: "fab fa-github", link: "https://github.com/yourusername" },
+        // Add these to your socials array
+        { name: "Facebook", icon: "fab fa-facebook", link: "https://www.facebook.com/zubair.ahmad.735426" },
+        { name: "Instagram", icon: "fab fa-instagram", link: "https://www.instagram.com/zubair_ahmad_dev/" },
+        // { name: "GitHub", icon: "fab fa-github", link: "https://github.com/yourusername" },
         { name: "LinkedIn", icon: "fab fa-linkedin", link: "https://www.linkedin.com/feed/" },
         { name: "Twitter", icon: "fab fa-twitter", link: "https://x.com/WebZubair" },
       ],
@@ -33,7 +36,7 @@ export default {
 
 <style scoped>
 .footer-bar {
-  background: #18181b;
+              background:black;
   color: #e0e0e6;
   padding: 1.7rem 0 1.1rem 0;
   box-shadow: 0 -2px 18px #09090b77;

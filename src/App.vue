@@ -41,10 +41,12 @@ export default {
 
 <style>
 .dark-theme {
-  background: #18181b;
+  /* background: #18181b; */
+  background: black;
   color: #f3f3f3;
   min-height: 100vh;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  /* font-family: 'Segoe UI', Arial, sans-serif; */
+  font-family: 'Roboto', Arial, sans-serif;
   overflow-x: hidden;
 }
 html {
@@ -53,6 +55,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #18181b;
+  /* background: #18181b; */
+  background: black;
 }
 </style>

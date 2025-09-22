@@ -119,7 +119,7 @@ export default {
 <style scoped>
 .contact-form-container {
   min-height: 100vh;
-  background: #18181b;
+              background:black;
   padding: 2rem 1rem;
   display: flex;
   align-items: center;
@@ -128,9 +128,11 @@ export default {
 }
 
 .form-wrapper {
-  background: rgba(40, 40, 40, 0.95);
+  /* background: rgba(40, 40, 40, 0.95); */
+                background:black;
+
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid lightblue;
   border-radius: 16px;
   padding: 2.5rem;
   width: 100%;

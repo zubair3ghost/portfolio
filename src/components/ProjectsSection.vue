@@ -12,7 +12,12 @@
       2 admin panel
       3 rider panle
       4 pharmacist panel 
-  Car rental website
+  Hiper index 
+     super admin panel 
+     admin panel 
+     distributor panel
+     reseller panel
+     client panel
 -->
 
 
@@ -26,7 +31,8 @@
       <div class="section-header">
         <h1>My Work</h1>
         <p class="section-subtitle">
-          A showcase of my recent work and creative projects
+          Showcasing innovative web solutions crafted with expertise in Angular, Vue.js, and Node.js/NestJS. Delivering seamless user experiences and scalable systems.
+          <!-- A showcase of my recent work and creative projects -->
         </p>
       </div>
 
@@ -107,70 +113,107 @@ export default {
       projects: [
         {
           id: 1,
-          title: 'E-Commerce Platform',
+          title: 'Almoosa E-Pharmacy',
           category: 'Web Development',
-          description: 'A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.',
-          image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-          technologies: ['Vue.js', 'Node.js', 'MongoDB', 'Stripe'],
-          liveUrl: 'https://example.com',
-          githubUrl: 'https://github.com/username/project',
-          date: '2024'
+          description: 'A comprehensive e-pharmacy platform with user-friendly interface and secure payment integration.',
+            image: require('@/assets/almoosa-website.jpg'),
+          technologies: ['Vue.js', 'Node.js', 'Stripe','Localization'],
+          liveUrl: 'https://almoosahealthgroup.org/',
+      
         },
+   
         {
+          id: 5,
+          title: 'On Tute',
+          category: 'Web Developement ',
+          description: 'A tutoring platform connecting students with expert tutors for personalized learning experiences.',
+            image: require('@/assets/ontute.jpg'),
+          technologies: ['Angular','Tailwind CSS', 'SCSS', 'Socket.io','Localization'],
+          liveUrl: 'https://ontute.io/public/student-home',
+       
+        },
+             {
+          id: 10,
+          title: 'Scale Pilot',
+          category: 'Web Developement ',
+          description: 'An app where user can send message to multiple user on instagram according to there hashtags and location with there account on subscription basis',
+            image: require('@/assets/scalepilot.jpg'),
+          technologies: ['Angular','Tailwind CSS', 'SCSS', 'Socket.io','Localization'],
+          liveUrl: 'https://www.scalepilot.de/',
+     
+        },
+     
+            {
+          id: 7,
+          title: 'Ailaan',
+          category: 'Web Developement ',
+          description: 'A website for IOS devices marketing and sales',
+            image: require('@/assets/ailaan .jpg'),
+          technologies: ['Angular','Tailwind CSS', 'SCSS', 'Socket.io'],
+          liveUrl: 'https://apps.apple.com/us/app/ailaan-pk/id6469113506',
+   
+        },
+         {
+          id: 8,
+          title: 'Hiper Index Admin Panel',
+          category: 'Web Developement ',
+          description: 'A panel where admin can manage users, projects, and credits for Hiper Index Plateform.',
+            image: require('@/assets/hiperindex-admin.jpg'),
+          technologies: ['Angular','Prime NG', 'SCSS','RxJs','Localization' ],
+          liveUrl: 'https://redesignstaging.hiperindex.com/login',
+         
+        },
+
+         {
+          id: 9,
+          title: 'Hiper Index',
+          category: 'Web Developement ',
+          description: 'A research plateform where individuals and teams can share, discover, and collaborate on innovative projects across domains.',
+            image: require('@/assets/client-hiperidex.jpg'),
+          technologies: ['Angular','Prime NG', 'SCSS','RxJs' ,'Localization'],
+          liveUrl: 'https://redesignstaging.hiperindex.com/login',
+         
+        },
+                 {
+          id: 6,
+          title: 'Gift Card Admin Panel',
+          category: 'Web Development',
+          description: 'An admin panel for managing gift card inventory, sales, and user accounts with analytics dashboard.',
+            image: require('@/assets/giftcard.jpg'),
+                   technologies: ['Angular','SCSS',],
+          liveUrl: 'https://example.com',   
+        },
+    
+         {
           id: 2,
-          title: 'Task Management App',
-          category: 'Mobile App',
-          description: 'A cross-platform mobile app for task management with real-time collaboration features.',
-          image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-          technologies: ['React Native', 'Firebase', 'Redux'],
-          liveUrl: 'https://example.com',
-          githubUrl: 'https://github.com/username/project',
-          date: '2024'
+          title: 'Almoosa Pharmacist Panel',
+          category: 'Web Application',
+          description: 'A cross plateform panel where pharmacist can manage prescriptions and inventory for web and mobile with ios and android apps',
+          image: require('@/assets/almoosa-pharmacist.jpg'),
+          technologies: ['Vue.js','Vuex','Firebase','Chart.js','Localization'],
+          liveUrl: 'https://epharmacy-stg-adminportal.almoosahospital.com.sa/',
+   
         },
         {
           id: 3,
-          title: 'Weather Dashboard',
+          title: 'Almoosa Admin Panel',
           category: 'Web Development',
           description: 'A responsive weather dashboard with interactive charts and location-based forecasts.',
-          image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
-          technologies: ['React', 'Chart.js', 'OpenWeather API'],
-          liveUrl: 'https://example.com',
-          githubUrl: 'https://github.com/username/project',
-          date: '2023'
+            image: require('@/assets/almoosa-admin.jpg'),
+          technologies: ['Vue.js', 'Chart.js', 'Vuex','Firebase','Localization'],
+          liveUrl: 'https://epharmacy-stg-adminportal.almoosahospital.com.sa/',
+        
         },
         {
           id: 4,
-          title: 'AI Image Generator',
-          category: 'AI/ML',
-          description: 'An AI-powered image generation tool using machine learning models and modern web technologies.',
-          image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-          technologies: ['Python', 'TensorFlow', 'FastAPI', 'Vue.js'],
-          liveUrl: 'https://example.com',
-          githubUrl: 'https://github.com/username/project',
-          date: '2023'
+          title: 'Rider-Panel',
+          category: 'Web developement with mobile',
+          description: 'Rider panel for delivery management with real-time tracking and notifications.',
+            image: require('@/assets/rider-panel-2.jpg'),
+          technologies: ['Vue.js','Vuex','Firebase','Localization'],
+          liveUrl: 'https://epharmacy-stg-rider.almoosahospital.com.sa/',
+    
         },
-        {
-          id: 5,
-          title: 'Portfolio Website',
-          category: 'Web Design',
-          description: 'A modern, responsive portfolio website with smooth animations and interactive elements.',
-          image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
-          technologies: ['Vue.js', 'SCSS', 'GSAP'],
-          liveUrl: 'https://example.com',
-          githubUrl: 'https://github.com/username/project',
-          date: '2023'
-        },
-        {
-          id: 6,
-          title: 'Crypto Tracker',
-          category: 'Web Development',
-          description: 'A real-time cryptocurrency tracking application with portfolio management features.',
-          image: 'https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=600&h=400&fit=crop',
-          technologies: ['Next.js', 'TypeScript', 'CoinGecko API'],
-          liveUrl: 'https://example.com',
-          githubUrl: 'https://github.com/username/project',
-          date: '2023'
-        }
       ]
     }
   },

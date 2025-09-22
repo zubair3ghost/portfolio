@@ -32,7 +32,7 @@
           
               
               <div class="hero-actions">
-                <a :href="resumeUrl" class="btn primary" download>
+                <a href="/resume.pdf" class="btn primary" download>
                   <i class="icon-download"></i>
                   Download Resume
                 </a>
@@ -49,7 +49,8 @@
               <div class="hero-img-container">
                 <div class="img-frame">
                   <div class="img-bg-effect"></div>
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="M. Developer" class="hero-img">
+                  <!-- <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="M. Developer" class="hero-img"> -->
+                  <img src="@/assets/zubair.jpg" alt="M. Developer" class="hero-img">
                   <div class="img-overlay"></div>
                 </div>
                 

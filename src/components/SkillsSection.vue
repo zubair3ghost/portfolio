@@ -336,8 +336,9 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 70%, rgba(125, 211, 252, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+  /* background: radial-gradient(circle at 30% 70%, rgba(125, 211, 252, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.1) 0%, transparent 50%); */
+              background:black;
   pointer-events: none;
 }
 

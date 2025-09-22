@@ -110,7 +110,7 @@ export default {
 <style scoped >
 .site-header {
   width: 100%;
-  background: #18181b;
+              background:black;
   box-shadow: 0 2px 10px #0003;
   position: fixed;
   top: 0;
