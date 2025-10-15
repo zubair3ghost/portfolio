@@ -2,7 +2,6 @@
   <footer class="footer-bar">
     <div class="footer-content">
       <div class="contact-info">
-        <span class="phone">📞Whats App 923232978278</span>
       </div>
       <div class="socials">
         <a v-for="icon in socials" :key="icon.link" :href="icon.link" target="_blank" :title="icon.name" class="social-icon">
@@ -23,7 +22,8 @@ export default {
     return {
       socials: [
         // Add these to your socials array
-        { name: "Facebook", icon: "fab fa-facebook", link: "https://www.facebook.com/zubair.ahmad.735426" },
+         { name: "WhatsApp", icon: "fab fa-whatsapp", link: "https://web.whatsapp.com/#" },
+         { name: "Facebook", icon: "fab fa-facebook", link: "https://www.facebook.com/zubair.ahmad.735426" },
         { name: "Instagram", icon: "fab fa-instagram", link: "https://www.instagram.com/zubair_ahmad_dev/" },
         // { name: "GitHub", icon: "fab fa-github", link: "https://github.com/yourusername" },
         { name: "LinkedIn", icon: "fab fa-linkedin", link: "https://www.linkedin.com/feed/" },

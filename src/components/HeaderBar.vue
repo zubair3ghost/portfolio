@@ -64,6 +64,7 @@ export default {
         { label: "Home", href: "#hero" },
         { label: "Skills", href: "#skills" },
         { label: "Projects", href: "#projects" },
+        { label: "Services", href: "#service" },
         { label: "Contact", href: "#contact" },
       ],
       mobileMenuOpen: false,

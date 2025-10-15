@@ -5,6 +5,7 @@
     <HeroSection id="hero" />
     <SkillsSection id="skills" />
     <ProjectsSection id="projects" />
+    <Services id="service" />
     <ContactSection id="contact" />
     <FooterBar />
   </div>
@@ -17,6 +18,7 @@ import SkillsSection from './components/SkillsSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import FooterBar from './components/FooterBar.vue'
+import Services from './components/services.vue'
 
 export default {
   name: 'App',
@@ -26,6 +28,7 @@ export default {
     SkillsSection,
     ProjectsSection,
     ContactSection,
+    Services,
     FooterBar
   },
   mounted() {
