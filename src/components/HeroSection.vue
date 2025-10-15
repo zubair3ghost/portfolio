@@ -1089,7 +1089,7 @@ export default {
       
       <!-- Scroll Indicator -->
       <div class="scroll-indicator">
-        <span class="scroll-text">Scroll to explore</span>
+        <!-- <span class="scroll-text">Scroll to explore</span> -->
         <div class="scroll-line"></div>
       </div>
     </div>
