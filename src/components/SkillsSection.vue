@@ -1,130 +1,239 @@
-<!-- <template>
-  <section id="skills" class="skills-section">
-    <h2 class="section-title">My Skills</h2>
-    <div class="skills-buttons">
-      <button
-        v-for="skill in skills"
-        :key="skill.name"
-        class="skill-btn"
-        :style="{ '--btn-color': skill.color }"
-        @click="onSkillClick(skill.name)"
-      >
-        <i :class="skill.icon"></i>
-        <span>{{ skill.name }}</span>
-      </button>
+<template>
+  <div class="skills-container">
+    <div class="skills-header">
+      <h1 class="section-title">My Skills</h1>
+
     </div>
-  </section>
+
+    <div class="skills-grid">
+      <div 
+        v-for="(skill, index) in skills" 
+        :key="index"
+        class="skill-card"
+        :style="{ animationDelay: `${index * 0.05}s` }"
+      >
+        <div class="skill-icon">
+          <i :class="skill.icon" :style="{ color: skill.color }"></i>
+        </div>
+        <p class="skill-name">{{ skill.name }}</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "SkillsSection",
+  name: 'SkillsSection',
   data() {
     return {
       skills: [
-        { name: "HTML", icon: "fab fa-html5", color: "#f6b08a" },         // softer orange
-        { name: "CSS", icon: "fab fa-css3-alt", color: "#90b4f6" },       // soft blue
-         { name: "JavaScript", icon: "fab fa-js", color: "#ffe699" },      // pale yellow
-        { name: "Angular", icon: "fab fa-angular", color: "#e69ba8" },    // soft red
-        { name: "Vue.js", icon: "fab fa-vuejs", color: "#a4dbc6" },       // mint
-        { name: "Node.js", icon: "fab fa-node-js", color: "#b7e5b4" },    // soft green
-        { name: "Express", icon: "fas fa-server", color: "#e0e0e0" },     // light gray
-        { name: "NestJS", icon: "fas fa-feather-alt", color: "#f4b5c3" }, // light rose
-        { name: "SCSS", icon: "fab fa-sass", color: "#e5b3cf" },          // pastel pink
-        { name: "Bootstrap", icon: "fab fa-bootstrap", color: "#b8a9d6" },// light purple
-        { name: "Material UI", icon: "fas fa-cube", color: "#89d7e6" },   // muted cyan
-        { name: "PrimeNG", icon: "fas fa-leaf", color: "#b1e4d7" },       // light teal
-       
-        { name: "Git", icon: "fab fa-git-alt", color: "#f6b4a4" },        // coral
-        { name: "GitHub", icon: "fab fa-github", color: "#e0e0e0" },      // light gray
+        { name: "HTML", icon: "fab fa-html5", color: "#E34F26" },
+        { name: "CSS", icon: "fab fa-css3-alt", color: "#1572B6" },
+        { name: "JavaScript", icon: "fab fa-js", color: "#F7DF1E" },
+        { name: "Angular", icon: "fab fa-angular", color: "#DD0031" },
+        { name: "Vue.js", icon: "fab fa-vuejs", color: "#4FC08D" },
+        { name: "React js", icon: "fab fa-react", color: "#61DAFB" },
+        { name: "Tailwind CSS", icon: "fas fa-wind", color: "#06B6D4" },
+        { name: "Node.js", icon: "fab fa-node-js", color: "#339933" },
+        { name: "Express", icon: "fas fa-server", color: "#FFFFFF" },
+        { name: "NestJS", icon: "fas fa-feather-alt", color: "#E0234E" },
+        { name: "SCSS", icon: "fab fa-sass", color: "#CC6699" },
+        { name: "Bootstrap", icon: "fab fa-bootstrap", color: "#7952B3" },
+        { name: "Material UI", icon: "fas fa-cube", color: "#0081CB" },
+        { name: "PrimeNG", icon: "fas fa-leaf", color: "#41B883" },
+        { name: "Git", icon: "fab fa-git-alt", color: "#F05032" },
+        { name: "GitHub", icon: "fab fa-github", color: "#FFFFFF" },
       ],
     };
-  },
-  methods: {
-    onSkillClick(skillName) {
-      alert(`You clicked: ${skillName}`);
-    },
   },
 };
 </script>
 
 <style scoped>
-.skills-section {
-  background: #23232a;
-  padding: 4.5rem 0 3.5rem 0;
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.section-title {
+
+.skills-container {
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 80px 40px;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.skills-header {
   text-align: center;
-  color: #7dd3fc;
-  font-size: 2.1rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 60px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  /* color: #FFD700; */
+  margin-bottom: 20px;
   letter-spacing: 1px;
 }
-.skills-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.3rem;
-  justify-content: center;
-  align-items: center;
-  max-width: 900px;
+
+.section-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #b0b0b0;
+  max-width: 800px;
   margin: 0 auto;
 }
-.skill-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  background: rgba(35,35,42, 0.95);
-  border: 2px solid var(--btn-color, #7dd3fc);
-  color: var(--btn-color, #7dd3fc);
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background-color: #1a1a1a;
   border-radius: 12px;
-  font-size: 1.08rem;
-  font-weight: 600;
-  padding: 0.65rem 1.3rem;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+      transition: all 0.4s 
+cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
   cursor: pointer;
-  box-shadow: 0 4px 16px #0001;
-  transition: 
-    background 0.13s,
-    color 0.13s,
-    border-color 0.13s,
-    transform 0.15s;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  border: 1px solid #2a2a2a;
 }
-.skill-btn i {
-  font-size: 1.44rem;
-  vertical-align: middle;
-  filter: brightness(0.96) contrast(0.95);
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background-color: #252525;
+  border-color: #00d4ff;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.5), 0 0 50px rgba(0, 212, 255, 0.3);
 }
-.skill-btn:hover, .skill-btn:focus {
-  background: var(--btn-color, #7dd3fc);
-  color: #23232a !important;
-  border-color: #fff;
-  transform: translateY(-4px) scale(1.07);
-  outline: none;
+
+.skill-icon {
+  font-size: 64px;
+  transition: none;
 }
-.skill-btn:hover i {
-  filter: brightness(0.8) contrast(1.15);
+
+.skill-card:hover .skill-icon {
+  transform: none;
 }
-@media (max-width: 700px) {
-  .skills-buttons {
-    gap: 0.8rem;
+
+.skill-icon i {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.skill-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  .skill-btn {
-    font-size: 0.98rem;
-    padding: 0.5rem 1rem;
-  }
-  .skill-btn i {
-    font-size: 1.15rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-@media (max-width: 450px) {
-  .skills-buttons {
-    gap: 0.5rem;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  .skill-btn {
-    font-size: 0.9rem;
-    padding: 0.45rem 0.82rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-</style> -->
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-description {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 20px;
+  }
+
+  .skill-card {
+    padding: 30px 15px;
+  }
+
+  .skill-icon {
+    font-size: 48px;
+  }
+
+  .skill-name {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    padding: 40px 15px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .skill-card {
+    padding: 25px 10px;
+  }
+
+  .skill-icon {
+    font-size: 42px;
+  }
+
+  .skill-name {
+    font-size: 13px;
+  }
+}
+</style>
 
 
 
@@ -144,6 +253,10 @@ export default {
 
 
 
+
+
+
+<!-- 
 
 <template>
   <section id="skills" class="skills-section">
@@ -151,8 +264,6 @@ export default {
       <span class="title-gradient">My Skills</span>
       <div class="title-underline"></div>
     </h2>
-    
-    <!-- Carousel Controls -->
     <div class="carousel-controls">
       <button 
         v-for="(view, index) in carouselViews" 
@@ -164,10 +275,8 @@ export default {
       </button>
     </div>
 
-    <!-- Main Carousel Container -->
     <div class="carousel-wrapper" ref="carouselWrapper">
       
-      <!-- Infinite Scroll View -->
       <div v-if="currentView === 0" class="infinite-scroll-container">
         <div class="infinite-scroll" :style="{ animationDuration: scrollSpeed + 's' }">
           <div v-for="skill in [...skills, ...skills]" :key="skill.name + Math.random()" class="skill-card">
@@ -180,32 +289,8 @@ export default {
         </div>
       </div>
 
-      <!-- 3D Rotating Carousel -->
-      <!-- <div v-if="currentView === 1" class="rotating-carousel">
-        <div class="carousel-3d" :style="{ transform: `rotateY(${rotation}deg)` }">
-          <div 
-            v-for="(skill, index) in skills" 
-            :key="skill.name"
-            class="carousel-item"
-            :style="{ 
-              transform: `rotateY(${index * (360/skills.length)}deg) translateZ(280px)`,
-              '--item-color': skill.color 
-            }"
-            @click="onSkillClick(skill.name)"
-          >
-            <div class="item-content">
-              <i :class="skill.icon" class="skill-icon-3d"></i>
-              <span class="skill-name-3d">{{ skill.name }}</span>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-3d-controls">
-          <button @click="rotate3D(-1)" class="rotate-btn prev">‹</button>
-          <button @click="rotate3D(1)" class="rotate-btn next">›</button>
-        </div>
-      </div> -->
 
-      <!-- Hexagon Grid -->
+
       <div v-if="currentView === 1" class="hexagon-grid">
         <div 
           v-for="(skill, index) in skills" 
@@ -226,7 +311,6 @@ export default {
         </div>
       </div>
 
-      <!-- Floating Particles -->
       <div v-if="currentView === 2" class="particles-container">
         <div 
           v-for="(skill, index) in skills" 
@@ -751,4 +835,4 @@ export default {
     height: 80px;
   }
 }
-</style>
+</style> -->
