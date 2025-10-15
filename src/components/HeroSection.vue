@@ -1614,6 +1614,11 @@ export default {
   z-index: 4;
   animation: float 3s ease-in-out infinite;
 }
+@media (max-width: 1025px) {
+  .floating-badge {
+    display: none;
+  }
+}
 
 .badge-1 {
   top: 20px;

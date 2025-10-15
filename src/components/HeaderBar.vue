@@ -144,7 +144,7 @@ export default {
   }
 .desktop-nav {
   display: flex;
-  gap: 1.7rem;
+  gap: .8rem;
 }
 .desktop-nav a {
   color: #e6e6ea;
